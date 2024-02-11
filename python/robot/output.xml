@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.8.10 on linux)" generated="2024-02-11T14:30:45.455481" rpa="false" schemaversion="5">
+<suite id="s1" name="TestSuite" source="/home/zabilac/Desktop/scripts/python/robot/TestSuite.robot">
+<test id="s1-t1" name="Login User with Password" line="9">
+<kw name="Connect to Server" owner="keywords">
+<kw name="Connect">
+<msg time="2024-02-11T14:30:45.540733" level="FAIL">No keyword with name 'Connect' found.</msg>
+<arg>fe80::aede:48ff:fe00:1122</arg>
+<status status="FAIL" start="2024-02-11T14:30:45.540700" elapsed="0.000081">No keyword with name 'Connect' found.</status>
+</kw>
+<status status="FAIL" start="2024-02-11T14:30:45.539663" elapsed="0.001233">No keyword with name 'Connect' found.</status>
+</kw>
+<kw name="Login User" owner="keywords">
+<arg>ironman</arg>
+<arg>1234567890</arg>
+<status status="NOT RUN" start="2024-02-11T14:30:45.541136" elapsed="0.000024"/>
+</kw>
+<kw name="Verify Valid Login" owner="keywords">
+<arg>Tony Stark</arg>
+<status status="NOT RUN" start="2024-02-11T14:30:45.541331" elapsed="0.000019"/>
+</kw>
+<kw name="Close Server Connection" owner="keywords" type="TEARDOWN">
+<kw name="Disconnect">
+<msg time="2024-02-11T14:30:45.543182" level="FAIL">No keyword with name 'Disconnect' found.</msg>
+<status status="FAIL" start="2024-02-11T14:30:45.543151" elapsed="0.000066">No keyword with name 'Disconnect' found.</status>
+</kw>
+<status status="FAIL" start="2024-02-11T14:30:45.541740" elapsed="0.001574">No keyword with name 'Disconnect' found.</status>
+</kw>
+<tag>positive</tag>
+<status status="FAIL" start="2024-02-11T14:30:45.539150" elapsed="0.004286">No keyword with name 'Connect' found.
+
+Also teardown failed:
+No keyword with name 'Disconnect' found.</status>
+</test>
+<test id="s1-t2" name="Denied Login with Wrong Password" line="15">
+<kw name="Connect to Server" owner="keywords">
+<kw name="Connect">
+<msg time="2024-02-11T14:30:45.544884" level="FAIL">No keyword with name 'Connect' found.</msg>
+<arg>fe80::aede:48ff:fe00:1122</arg>
+<status status="FAIL" start="2024-02-11T14:30:45.544858" elapsed="0.000056">No keyword with name 'Connect' found.</status>
+</kw>
+<status status="FAIL" start="2024-02-11T14:30:45.544152" elapsed="0.000839">No keyword with name 'Connect' found.</status>
+</kw>
+<kw name="Run Keyword And Expect Error" owner="BuiltIn">
+<arg>*Invalid Password</arg>
+<arg>Login User</arg>
+<arg>ironman</arg>
+<arg>123</arg>
+<doc>Runs the keyword and checks that the expected error occurred.</doc>
+<status status="NOT RUN" start="2024-02-11T14:30:45.545153" elapsed="0.000020"/>
+</kw>
+<kw name="Verify Unauthorised Access" owner="keywords">
+<status status="NOT RUN" start="2024-02-11T14:30:45.545333" elapsed="0.000019"/>
+</kw>
+<kw name="Close Server Connection" owner="keywords" type="TEARDOWN">
+<kw name="Disconnect">
+<msg time="2024-02-11T14:30:45.546362" level="FAIL">No keyword with name 'Disconnect' found.</msg>
+<status status="FAIL" start="2024-02-11T14:30:45.546338" elapsed="0.000052">No keyword with name 'Disconnect' found.</status>
+</kw>
+<status status="FAIL" start="2024-02-11T14:30:45.545595" elapsed="0.000880">No keyword with name 'Disconnect' found.</status>
+</kw>
+<tag>negative</tag>
+<status status="FAIL" start="2024-02-11T14:30:45.543822" elapsed="0.003672">No keyword with name 'Connect' found.
+
+Also teardown failed:
+No keyword with name 'Disconnect' found.</status>
+</test>
+<doc>A test suite for valid login.
+
+Keywords are imported from the resource file</doc>
+<status status="FAIL" start="2024-02-11T14:30:45.456448" elapsed="0.091489"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">negative</stat>
+<stat pass="0" fail="1" skip="0">positive</stat>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="TestSuite">TestSuite</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-02-11T14:30:45.535696" level="ERROR">Error in file '/home/zabilac/Desktop/scripts/python/robot/keywords.resource' on line 4: Importing library '/home/zabilac/Desktop/scripts/python/robot/CustomLibrary.py' failed: ModuleNotFoundError: No module named 'TestObject'
+Traceback (most recent call last):
+  File "/home/zabilac/Desktop/scripts/python/robot/CustomLibrary.py", line 1, in &lt;module&gt;
+    from TestObject import TestObject
+PYTHONPATH:
+  /home/zabilac/Desktop/scripts/python/robot
+  /home/zabilac/.local/bin
+  /usr/lib/python38.zip
+  /usr/lib/python3.8
+  /usr/lib/python3.8/lib-dynload
+  /home/zabilac/.local/lib/python3.8/site-packages
+  /usr/local/lib/python3.8/dist-packages
+  /usr/lib/python3/dist-packages</msg>
+</errors>
+</robot>
