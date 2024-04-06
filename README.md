@@ -9,6 +9,8 @@ This is a repo containing automation script example test files for the following
 * [Selenium](https://www.geeksforgeeks.org/selenium-python-introduction-and-installation/)
 * [Playwright](https://playwright.dev/docs/api/class-playwright)
 * [Puppetteer](https://pptr.dev/)
+* [Testcafe](https://pptr.dev/)
+
 
 ## Python
 
