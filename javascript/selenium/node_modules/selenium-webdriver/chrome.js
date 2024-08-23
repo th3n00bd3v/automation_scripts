@@ -118,6 +118,8 @@
  * [PATH]: http://en.wikipedia.org/wiki/PATH_%28variable%29
  * [android]: https://chromedriver.chromium.org/getting-started/getting-started---android
  * [webview]: https://developer.chrome.com/multidevice/webview/overview
+ *
+ * @module selenium-webdriver/chrome
  */
 
 'use strict'
@@ -214,14 +216,7 @@ class Driver extends chromium.Driver {
    */
   static createSession(opt_config, opt_serviceExecutor) {
     let caps = opt_config || new Options()
-    return /** @type {!Driver} */ (
-      super.createSession(
-        caps,
-        opt_serviceExecutor,
-        'goog',
-        CHROME_CAPABILITY_KEY
-      )
-    )
+    return /** @type {!Driver} */ (super.createSession(caps, opt_serviceExecutor, 'goog', CHROME_CAPABILITY_KEY))
   }
 
   /**
