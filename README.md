@@ -6,7 +6,7 @@ This is a repo containing automation script example test files for the following
 ## JavaScript
 
 * [Cypress](https://docs.cypress.io/guides/getting-started/installing-cypress)
-* [Selenium](https://www.geeksforgeeks.org/selenium-python-introduction-and-installation/)
+* [Selenium](https://saucelabs.com/resources/blog/selenium-javascript-tutorial-web-automation)
 * [Playwright](https://playwright.dev/docs/api/class-playwright)
 * [Puppetteer](https://pptr.dev/)
 * [Testcafe](https://testcafe.io)
