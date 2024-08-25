@@ -11,7 +11,7 @@ describe('template spec', () => {
     cy.get('#password').type('Test@123')
     cy.get('#log-in').click()
   })
-
+w
   after('', () => {
 
     cy.get('#time').invoke('text').then((text) => {

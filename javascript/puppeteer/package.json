@@ -1,5 +1,17 @@
 {
   "dependencies": {
-    "puppeteer": "^22.0.0"
-  }
+    "puppeteer": "^23.1.1",
+    "puppeteer-core": "^23.1.1"
+  },
+  "name": "puppeteer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
